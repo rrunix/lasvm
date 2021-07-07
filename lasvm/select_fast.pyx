@@ -8,8 +8,8 @@
 
 from cython.operator cimport dereference as deref, preincrement as inc
 
-from lightning.random.random_fast cimport RandomState
-from lightning.dataset_fast cimport KernelDataset
+from lasvm.random.random_fast cimport RandomState
+from lasvm.dataset_fast cimport KernelDataset
 
 cdef extern from "math.h":
    double fabs(double)

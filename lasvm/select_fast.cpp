@@ -618,8 +618,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__lightning__select_fast
-#define __PYX_HAVE_API__lightning__select_fast
+#define __PYX_HAVE__lasvm__select_fast
+#define __PYX_HAVE_API__lasvm__select_fast
 /* Early includes */
 #include "ios"
 #include "new"
@@ -882,11 +882,11 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "lightning/select_fast.pyx",
+  "lasvm/select_fast.pyx",
   "__init__.pxd",
   "type.pxd",
-  "lightning/random/random_fast.pxd",
-  "lightning/dataset_fast.pxd",
+  "lasvm/random/random_fast.pxd",
+  "lasvm/dataset_fast.pxd",
 };
 /* BufferFormatStructs.proto */
 #define IS_UNSIGNED(type) (((type) -1) > 0)
@@ -1139,13 +1139,13 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_9lightning_6random_11random_fast_RandomState;
-struct __pyx_obj_9lightning_12dataset_fast_Dataset;
-struct __pyx_obj_9lightning_12dataset_fast_ContiguousDataset;
-struct __pyx_obj_9lightning_12dataset_fast_FortranDataset;
-struct __pyx_obj_9lightning_12dataset_fast_CSRDataset;
-struct __pyx_obj_9lightning_12dataset_fast_CSCDataset;
-struct __pyx_obj_9lightning_12dataset_fast_KernelDataset;
+struct __pyx_obj_5lasvm_6random_11random_fast_RandomState;
+struct __pyx_obj_5lasvm_12dataset_fast_Dataset;
+struct __pyx_obj_5lasvm_12dataset_fast_ContiguousDataset;
+struct __pyx_obj_5lasvm_12dataset_fast_FortranDataset;
+struct __pyx_obj_5lasvm_12dataset_fast_CSRDataset;
+struct __pyx_obj_5lasvm_12dataset_fast_CSCDataset;
+struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset;
 
 /* "../../../anaconda3/envs/lasvm/lib/python3.7/site-packages/numpy/__init__.pxd":729
  * ctypedef npy_longdouble longdouble_t
@@ -1183,74 +1183,74 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "lightning/random/random_fast.pxd":10
+/* "lasvm/random/random_fast.pxd":10
  *         double gauss
  * 
  * cdef class RandomState:             # <<<<<<<<<<<<<<
  * 
  *     cdef rk_state *internal_state
  */
-struct __pyx_obj_9lightning_6random_11random_fast_RandomState {
+struct __pyx_obj_5lasvm_6random_11random_fast_RandomState {
   PyObject_HEAD
-  struct __pyx_vtabstruct_9lightning_6random_11random_fast_RandomState *__pyx_vtab;
+  struct __pyx_vtabstruct_5lasvm_6random_11random_fast_RandomState *__pyx_vtab;
   rk_state *internal_state;
 };
 
 
-/* "lightning/dataset_fast.pxd":7
+/* "lasvm/dataset_fast.pxd":7
  * from libcpp.map cimport map
  * 
  * cdef class Dataset:             # <<<<<<<<<<<<<<
  * 
  *     cdef int n_samples
  */
-struct __pyx_obj_9lightning_12dataset_fast_Dataset {
+struct __pyx_obj_5lasvm_12dataset_fast_Dataset {
   PyObject_HEAD
-  struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset *__pyx_vtab;
+  struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset *__pyx_vtab;
   int n_samples;
   int n_features;
 };
 
 
-/* "lightning/dataset_fast.pxd":32
+/* "lasvm/dataset_fast.pxd":32
  * 
  * 
  * cdef class ContiguousDataset(Dataset):             # <<<<<<<<<<<<<<
  * 
  *     cdef int* indices
  */
-struct __pyx_obj_9lightning_12dataset_fast_ContiguousDataset {
-  struct __pyx_obj_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_obj_5lasvm_12dataset_fast_ContiguousDataset {
+  struct __pyx_obj_5lasvm_12dataset_fast_Dataset __pyx_base;
   int *indices;
   double *data;
   PyObject *X;
 };
 
 
-/* "lightning/dataset_fast.pxd":45
+/* "lasvm/dataset_fast.pxd":45
  * 
  * 
  * cdef class FortranDataset(Dataset):             # <<<<<<<<<<<<<<
  * 
  *     cdef int* indices
  */
-struct __pyx_obj_9lightning_12dataset_fast_FortranDataset {
-  struct __pyx_obj_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_obj_5lasvm_12dataset_fast_FortranDataset {
+  struct __pyx_obj_5lasvm_12dataset_fast_Dataset __pyx_base;
   int *indices;
   double *data;
   PyObject *X;
 };
 
 
-/* "lightning/dataset_fast.pxd":58
+/* "lasvm/dataset_fast.pxd":58
  * 
  * 
  * cdef class CSRDataset(Dataset):             # <<<<<<<<<<<<<<
  * 
  *     cdef int* indices
  */
-struct __pyx_obj_9lightning_12dataset_fast_CSRDataset {
-  struct __pyx_obj_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_obj_5lasvm_12dataset_fast_CSRDataset {
+  struct __pyx_obj_5lasvm_12dataset_fast_Dataset __pyx_base;
   int *indices;
   double *data;
   int *indptr;
@@ -1258,15 +1258,15 @@ struct __pyx_obj_9lightning_12dataset_fast_CSRDataset {
 };
 
 
-/* "lightning/dataset_fast.pxd":72
+/* "lasvm/dataset_fast.pxd":72
  * 
  * 
  * cdef class CSCDataset(Dataset):             # <<<<<<<<<<<<<<
  * 
  *     cdef int* indices
  */
-struct __pyx_obj_9lightning_12dataset_fast_CSCDataset {
-  struct __pyx_obj_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_obj_5lasvm_12dataset_fast_CSCDataset {
+  struct __pyx_obj_5lasvm_12dataset_fast_Dataset __pyx_base;
   int *indices;
   double *data;
   int *indptr;
@@ -1274,15 +1274,15 @@ struct __pyx_obj_9lightning_12dataset_fast_CSCDataset {
 };
 
 
-/* "lightning/dataset_fast.pxd":86
+/* "lasvm/dataset_fast.pxd":86
  * 
  * 
  * cdef class KernelDataset(Dataset):             # <<<<<<<<<<<<<<
  * 
  *     # Input data
  */
-struct __pyx_obj_9lightning_12dataset_fast_KernelDataset {
-  struct __pyx_obj_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset {
+  struct __pyx_obj_5lasvm_12dataset_fast_Dataset __pyx_base;
   int *indices;
   double *data;
   int n_features_Y;
@@ -1304,7 +1304,7 @@ struct __pyx_obj_9lightning_12dataset_fast_KernelDataset {
 
 
 
-/* "lightning/random/random_fast.pxd":10
+/* "lasvm/random/random_fast.pxd":10
  *         double gauss
  * 
  * cdef class RandomState:             # <<<<<<<<<<<<<<
@@ -1312,13 +1312,13 @@ struct __pyx_obj_9lightning_12dataset_fast_KernelDataset {
  *     cdef rk_state *internal_state
  */
 
-struct __pyx_vtabstruct_9lightning_6random_11random_fast_RandomState {
-  long (*randint)(struct __pyx_obj_9lightning_6random_11random_fast_RandomState *, unsigned long, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_5lasvm_6random_11random_fast_RandomState {
+  long (*randint)(struct __pyx_obj_5lasvm_6random_11random_fast_RandomState *, unsigned long, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9lightning_6random_11random_fast_RandomState *__pyx_vtabptr_9lightning_6random_11random_fast_RandomState;
+static struct __pyx_vtabstruct_5lasvm_6random_11random_fast_RandomState *__pyx_vtabptr_5lasvm_6random_11random_fast_RandomState;
 
 
-/* "lightning/dataset_fast.pxd":7
+/* "lasvm/dataset_fast.pxd":7
  * from libcpp.map cimport map
  * 
  * cdef class Dataset:             # <<<<<<<<<<<<<<
@@ -1326,18 +1326,18 @@ static struct __pyx_vtabstruct_9lightning_6random_11random_fast_RandomState *__p
  *     cdef int n_samples
  */
 
-struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset {
-  void (*get_column_ptr)(struct __pyx_obj_9lightning_12dataset_fast_Dataset *, int, int **, double **, int *);
-  PyObject *(*get_column)(struct __pyx_obj_9lightning_12dataset_fast_Dataset *, int, int __pyx_skip_dispatch);
-  void (*get_row_ptr)(struct __pyx_obj_9lightning_12dataset_fast_Dataset *, int, int **, double **, int *);
-  PyObject *(*get_row)(struct __pyx_obj_9lightning_12dataset_fast_Dataset *, int, int __pyx_skip_dispatch);
-  int (*get_n_samples)(struct __pyx_obj_9lightning_12dataset_fast_Dataset *, int __pyx_skip_dispatch);
-  int (*get_n_features)(struct __pyx_obj_9lightning_12dataset_fast_Dataset *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset {
+  void (*get_column_ptr)(struct __pyx_obj_5lasvm_12dataset_fast_Dataset *, int, int **, double **, int *);
+  PyObject *(*get_column)(struct __pyx_obj_5lasvm_12dataset_fast_Dataset *, int, int __pyx_skip_dispatch);
+  void (*get_row_ptr)(struct __pyx_obj_5lasvm_12dataset_fast_Dataset *, int, int **, double **, int *);
+  PyObject *(*get_row)(struct __pyx_obj_5lasvm_12dataset_fast_Dataset *, int, int __pyx_skip_dispatch);
+  int (*get_n_samples)(struct __pyx_obj_5lasvm_12dataset_fast_Dataset *, int __pyx_skip_dispatch);
+  int (*get_n_features)(struct __pyx_obj_5lasvm_12dataset_fast_Dataset *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset *__pyx_vtabptr_9lightning_12dataset_fast_Dataset;
+static struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset *__pyx_vtabptr_5lasvm_12dataset_fast_Dataset;
 
 
-/* "lightning/dataset_fast.pxd":32
+/* "lasvm/dataset_fast.pxd":32
  * 
  * 
  * cdef class ContiguousDataset(Dataset):             # <<<<<<<<<<<<<<
@@ -1345,13 +1345,13 @@ static struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset *__pyx_vtabptr_
  *     cdef int* indices
  */
 
-struct __pyx_vtabstruct_9lightning_12dataset_fast_ContiguousDataset {
-  struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_vtabstruct_5lasvm_12dataset_fast_ContiguousDataset {
+  struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset __pyx_base;
 };
-static struct __pyx_vtabstruct_9lightning_12dataset_fast_ContiguousDataset *__pyx_vtabptr_9lightning_12dataset_fast_ContiguousDataset;
+static struct __pyx_vtabstruct_5lasvm_12dataset_fast_ContiguousDataset *__pyx_vtabptr_5lasvm_12dataset_fast_ContiguousDataset;
 
 
-/* "lightning/dataset_fast.pxd":45
+/* "lasvm/dataset_fast.pxd":45
  * 
  * 
  * cdef class FortranDataset(Dataset):             # <<<<<<<<<<<<<<
@@ -1359,13 +1359,13 @@ static struct __pyx_vtabstruct_9lightning_12dataset_fast_ContiguousDataset *__py
  *     cdef int* indices
  */
 
-struct __pyx_vtabstruct_9lightning_12dataset_fast_FortranDataset {
-  struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_vtabstruct_5lasvm_12dataset_fast_FortranDataset {
+  struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset __pyx_base;
 };
-static struct __pyx_vtabstruct_9lightning_12dataset_fast_FortranDataset *__pyx_vtabptr_9lightning_12dataset_fast_FortranDataset;
+static struct __pyx_vtabstruct_5lasvm_12dataset_fast_FortranDataset *__pyx_vtabptr_5lasvm_12dataset_fast_FortranDataset;
 
 
-/* "lightning/dataset_fast.pxd":58
+/* "lasvm/dataset_fast.pxd":58
  * 
  * 
  * cdef class CSRDataset(Dataset):             # <<<<<<<<<<<<<<
@@ -1373,13 +1373,13 @@ static struct __pyx_vtabstruct_9lightning_12dataset_fast_FortranDataset *__pyx_v
  *     cdef int* indices
  */
 
-struct __pyx_vtabstruct_9lightning_12dataset_fast_CSRDataset {
-  struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_vtabstruct_5lasvm_12dataset_fast_CSRDataset {
+  struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset __pyx_base;
 };
-static struct __pyx_vtabstruct_9lightning_12dataset_fast_CSRDataset *__pyx_vtabptr_9lightning_12dataset_fast_CSRDataset;
+static struct __pyx_vtabstruct_5lasvm_12dataset_fast_CSRDataset *__pyx_vtabptr_5lasvm_12dataset_fast_CSRDataset;
 
 
-/* "lightning/dataset_fast.pxd":72
+/* "lasvm/dataset_fast.pxd":72
  * 
  * 
  * cdef class CSCDataset(Dataset):             # <<<<<<<<<<<<<<
@@ -1387,13 +1387,13 @@ static struct __pyx_vtabstruct_9lightning_12dataset_fast_CSRDataset *__pyx_vtabp
  *     cdef int* indices
  */
 
-struct __pyx_vtabstruct_9lightning_12dataset_fast_CSCDataset {
-  struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset __pyx_base;
+struct __pyx_vtabstruct_5lasvm_12dataset_fast_CSCDataset {
+  struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset __pyx_base;
 };
-static struct __pyx_vtabstruct_9lightning_12dataset_fast_CSCDataset *__pyx_vtabptr_9lightning_12dataset_fast_CSCDataset;
+static struct __pyx_vtabstruct_5lasvm_12dataset_fast_CSCDataset *__pyx_vtabptr_5lasvm_12dataset_fast_CSCDataset;
 
 
-/* "lightning/dataset_fast.pxd":86
+/* "lasvm/dataset_fast.pxd":86
  * 
  * 
  * cdef class KernelDataset(Dataset):             # <<<<<<<<<<<<<<
@@ -1401,26 +1401,26 @@ static struct __pyx_vtabstruct_9lightning_12dataset_fast_CSCDataset *__pyx_vtabp
  *     # Input data
  */
 
-struct __pyx_vtabstruct_9lightning_12dataset_fast_KernelDataset {
-  struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset __pyx_base;
-  void (*_kernel_column)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, double *);
-  void (*_kernel_column_sv)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, double *);
-  void (*_create_column)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int);
-  void (*_clear_columns)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int);
-  double *(*_get_column)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int);
-  double *(*get_column_sv_ptr)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int);
-  void (*get_column_sv_out)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, double *);
-  PyObject *(*get_column_sv)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
-  void (*get_diag_out)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, double *);
-  PyObject *(*get_diag)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int __pyx_skip_dispatch);
-  double (*get_element)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, int, int __pyx_skip_dispatch);
-  PyObject *(*remove_column)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
-  PyObject *(*add_sv)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
-  PyObject *(*remove_sv)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
-  int (*n_sv)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int __pyx_skip_dispatch);
-  PyObject *(*get_size)(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_5lasvm_12dataset_fast_KernelDataset {
+  struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset __pyx_base;
+  void (*_kernel_column)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, double *);
+  void (*_kernel_column_sv)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, double *);
+  void (*_create_column)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int);
+  void (*_clear_columns)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int);
+  double *(*_get_column)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int);
+  double *(*get_column_sv_ptr)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int);
+  void (*get_column_sv_out)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, double *);
+  PyObject *(*get_column_sv)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
+  void (*get_diag_out)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, double *);
+  PyObject *(*get_diag)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int __pyx_skip_dispatch);
+  double (*get_element)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, int, int __pyx_skip_dispatch);
+  PyObject *(*remove_column)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
+  PyObject *(*add_sv)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
+  PyObject *(*remove_sv)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int, int __pyx_skip_dispatch);
+  int (*n_sv)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int __pyx_skip_dispatch);
+  PyObject *(*get_size)(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9lightning_12dataset_fast_KernelDataset *__pyx_vtabptr_9lightning_12dataset_fast_KernelDataset;
+static struct __pyx_vtabstruct_5lasvm_12dataset_fast_KernelDataset *__pyx_vtabptr_5lasvm_12dataset_fast_KernelDataset;
 
 /* --- Runtime support code (head) --- */
 /* Refnanny.proto */
@@ -1885,29 +1885,29 @@ static PyTypeObject *__pyx_ptype_5numpy_flexible = 0;
 static PyTypeObject *__pyx_ptype_5numpy_character = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 
-/* Module declarations from 'lightning.random.random_fast' */
-static PyTypeObject *__pyx_ptype_9lightning_6random_11random_fast_RandomState = 0;
+/* Module declarations from 'lasvm.random.random_fast' */
+static PyTypeObject *__pyx_ptype_5lasvm_6random_11random_fast_RandomState = 0;
 
 /* Module declarations from 'libcpp.utility' */
 
 /* Module declarations from 'libcpp.map' */
 
-/* Module declarations from 'lightning.dataset_fast' */
-static PyTypeObject *__pyx_ptype_9lightning_12dataset_fast_Dataset = 0;
-static PyTypeObject *__pyx_ptype_9lightning_12dataset_fast_ContiguousDataset = 0;
-static PyTypeObject *__pyx_ptype_9lightning_12dataset_fast_FortranDataset = 0;
-static PyTypeObject *__pyx_ptype_9lightning_12dataset_fast_CSRDataset = 0;
-static PyTypeObject *__pyx_ptype_9lightning_12dataset_fast_CSCDataset = 0;
-static PyTypeObject *__pyx_ptype_9lightning_12dataset_fast_KernelDataset = 0;
+/* Module declarations from 'lasvm.dataset_fast' */
+static PyTypeObject *__pyx_ptype_5lasvm_12dataset_fast_Dataset = 0;
+static PyTypeObject *__pyx_ptype_5lasvm_12dataset_fast_ContiguousDataset = 0;
+static PyTypeObject *__pyx_ptype_5lasvm_12dataset_fast_FortranDataset = 0;
+static PyTypeObject *__pyx_ptype_5lasvm_12dataset_fast_CSRDataset = 0;
+static PyTypeObject *__pyx_ptype_5lasvm_12dataset_fast_CSCDataset = 0;
+static PyTypeObject *__pyx_ptype_5lasvm_12dataset_fast_KernelDataset = 0;
 
-/* Module declarations from 'lightning.select_fast' */
+/* Module declarations from 'lasvm.select_fast' */
 static __Pyx_TypeInfo __Pyx_TypeInfo_int = { "int", NULL, sizeof(int), { 0 }, 0, IS_UNSIGNED(int) ? 'U' : 'I', IS_UNSIGNED(int), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "lightning.select_fast"
-extern int __pyx_module_is_main_lightning__select_fast;
-int __pyx_module_is_main_lightning__select_fast = 0;
+#define __Pyx_MODULE_NAME "lasvm.select_fast"
+extern int __pyx_module_is_main_lasvm__select_fast;
+int __pyx_module_is_main_lasvm__select_fast = 0;
 
-/* Implementation of 'lightning.select_fast' */
+/* Implementation of 'lasvm.select_fast' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ImportError;
@@ -1946,7 +1946,7 @@ static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_tuple__3;
 /* Late includes */
 
-/* "lightning/select_fast.pyx":21
+/* "lasvm/select_fast.pyx":21
  * 
  * 
  * cdef int get_select_method(selection):             # <<<<<<<<<<<<<<
@@ -1954,7 +1954,7 @@ static PyObject *__pyx_tuple__3;
  *         return 0
  */
 
-static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_selection) {
+static int __pyx_f_5lasvm_11select_fast_get_select_method(PyObject *__pyx_v_selection) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -1964,7 +1964,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_select_method", 0);
 
-  /* "lightning/select_fast.pyx":22
+  /* "lasvm/select_fast.pyx":22
  * 
  * cdef int get_select_method(selection):
  *     if selection == "cyclic":             # <<<<<<<<<<<<<<
@@ -1974,7 +1974,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
   __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_v_selection, __pyx_n_s_cyclic, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 22, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "lightning/select_fast.pyx":23
+    /* "lasvm/select_fast.pyx":23
  * cdef int get_select_method(selection):
  *     if selection == "cyclic":
  *         return 0             # <<<<<<<<<<<<<<
@@ -1984,7 +1984,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "lightning/select_fast.pyx":22
+    /* "lasvm/select_fast.pyx":22
  * 
  * cdef int get_select_method(selection):
  *     if selection == "cyclic":             # <<<<<<<<<<<<<<
@@ -1993,7 +1993,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
  */
   }
 
-  /* "lightning/select_fast.pyx":24
+  /* "lasvm/select_fast.pyx":24
  *     if selection == "cyclic":
  *         return 0
  *     elif selection == "uniform":             # <<<<<<<<<<<<<<
@@ -2003,7 +2003,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
   __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_v_selection, __pyx_n_s_uniform, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 24, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "lightning/select_fast.pyx":25
+    /* "lasvm/select_fast.pyx":25
  *         return 0
  *     elif selection == "uniform":
  *         return 1             # <<<<<<<<<<<<<<
@@ -2013,7 +2013,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "lightning/select_fast.pyx":24
+    /* "lasvm/select_fast.pyx":24
  *     if selection == "cyclic":
  *         return 0
  *     elif selection == "uniform":             # <<<<<<<<<<<<<<
@@ -2022,7 +2022,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
  */
   }
 
-  /* "lightning/select_fast.pyx":26
+  /* "lasvm/select_fast.pyx":26
  *     elif selection == "uniform":
  *         return 1
  *     elif selection == "active":             # <<<<<<<<<<<<<<
@@ -2032,7 +2032,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
   __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_v_selection, __pyx_n_s_active, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "lightning/select_fast.pyx":27
+    /* "lasvm/select_fast.pyx":27
  *         return 1
  *     elif selection == "active":
  *         return 2             # <<<<<<<<<<<<<<
@@ -2042,7 +2042,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
     __pyx_r = 2;
     goto __pyx_L0;
 
-    /* "lightning/select_fast.pyx":26
+    /* "lasvm/select_fast.pyx":26
  *     elif selection == "uniform":
  *         return 1
  *     elif selection == "active":             # <<<<<<<<<<<<<<
@@ -2051,7 +2051,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
  */
   }
 
-  /* "lightning/select_fast.pyx":28
+  /* "lasvm/select_fast.pyx":28
  *     elif selection == "active":
  *         return 2
  *     elif selection == "loss":             # <<<<<<<<<<<<<<
@@ -2061,7 +2061,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
   __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_v_selection, __pyx_n_s_loss, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 28, __pyx_L1_error)
   if (likely(__pyx_t_1)) {
 
-    /* "lightning/select_fast.pyx":29
+    /* "lasvm/select_fast.pyx":29
  *         return 2
  *     elif selection == "loss":
  *         return 3             # <<<<<<<<<<<<<<
@@ -2071,7 +2071,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
     __pyx_r = 3;
     goto __pyx_L0;
 
-    /* "lightning/select_fast.pyx":28
+    /* "lasvm/select_fast.pyx":28
  *     elif selection == "active":
  *         return 2
  *     elif selection == "loss":             # <<<<<<<<<<<<<<
@@ -2080,7 +2080,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
  */
   }
 
-  /* "lightning/select_fast.pyx":31
+  /* "lasvm/select_fast.pyx":31
  *         return 3
  *     else:
  *         raise ValueError("Wrong selection method.")             # <<<<<<<<<<<<<<
@@ -2095,7 +2095,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
     __PYX_ERR(0, 31, __pyx_L1_error)
   }
 
-  /* "lightning/select_fast.pyx":21
+  /* "lasvm/select_fast.pyx":21
  * 
  * 
  * cdef int get_select_method(selection):             # <<<<<<<<<<<<<<
@@ -2106,14 +2106,14 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_WriteUnraisable("lightning.select_fast.get_select_method", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("lasvm.select_fast.get_select_method", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "lightning/select_fast.pyx":34
+/* "lasvm/select_fast.pyx":34
  * 
  * 
  * cdef int select_sv(np.ndarray[int, ndim=1, mode='c'] A,             # <<<<<<<<<<<<<<
@@ -2121,7 +2121,7 @@ static int __pyx_f_9lightning_11select_fast_get_select_method(PyObject *__pyx_v_
  *                    int max_size,
  */
 
-static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, int __pyx_v_search_size, int __pyx_v_max_size, int __pyx_v_select_method, PyArrayObject *__pyx_v_alpha, double __pyx_v_b, struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *__pyx_v_kds, PyArrayObject *__pyx_v_y, int __pyx_v_check_duplicates, struct __pyx_obj_9lightning_6random_11random_fast_RandomState *__pyx_v_rs) {
+static int __pyx_f_5lasvm_11select_fast_select_sv(PyArrayObject *__pyx_v_A, int __pyx_v_search_size, int __pyx_v_max_size, int __pyx_v_select_method, PyArrayObject *__pyx_v_alpha, double __pyx_v_b, struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *__pyx_v_kds, PyArrayObject *__pyx_v_y, int __pyx_v_check_duplicates, struct __pyx_obj_5lasvm_6random_11random_fast_RandomState *__pyx_v_rs) {
   CYTHON_UNUSED int __pyx_v_i;
   int __pyx_v_s;
   int __pyx_v_j;
@@ -2180,7 +2180,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
   }
   __pyx_pybuffernd_y.diminfo[0].strides = __pyx_pybuffernd_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_y.diminfo[0].shape = __pyx_pybuffernd_y.rcbuffer->pybuffer.shape[0];
 
-  /* "lightning/select_fast.pyx":48
+  /* "lasvm/select_fast.pyx":48
  *     cdef int s, j
  *     cdef double score
  *     cdef double min_score = DBL_MAX             # <<<<<<<<<<<<<<
@@ -2189,7 +2189,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
   __pyx_v_min_score = DBL_MAX;
 
-  /* "lightning/select_fast.pyx":50
+  /* "lasvm/select_fast.pyx":50
  *     cdef double min_score = DBL_MAX
  *     cdef double *col
  *     cdef int selected = 0             # <<<<<<<<<<<<<<
@@ -2198,7 +2198,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
   __pyx_v_selected = 0;
 
-  /* "lightning/select_fast.pyx":52
+  /* "lasvm/select_fast.pyx":52
  *     cdef int selected = 0
  *     cdef list[int].iterator it
  *     cdef list[int]* support_set = kds.support_set             # <<<<<<<<<<<<<<
@@ -2208,7 +2208,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
   __pyx_t_1 = __pyx_v_kds->support_set;
   __pyx_v_support_set = __pyx_t_1;
 
-  /* "lightning/select_fast.pyx":53
+  /* "lasvm/select_fast.pyx":53
  *     cdef list[int].iterator it
  *     cdef list[int]* support_set = kds.support_set
  *     cdef int* support_vectors = kds.support_vector             # <<<<<<<<<<<<<<
@@ -2218,7 +2218,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
   __pyx_t_2 = __pyx_v_kds->support_vector;
   __pyx_v_support_vectors = __pyx_t_2;
 
-  /* "lightning/select_fast.pyx":55
+  /* "lasvm/select_fast.pyx":55
  *     cdef int* support_vectors = kds.support_vector
  * 
  *     for i in range(search_size):             # <<<<<<<<<<<<<<
@@ -2230,17 +2230,17 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "lightning/select_fast.pyx":56
+    /* "lasvm/select_fast.pyx":56
  * 
  *     for i in range(search_size):
  *         s = A[rs.randint(max_size - 1)]             # <<<<<<<<<<<<<<
  * 
  *         if check_duplicates and support_vectors[s] >= 0:
  */
-    __pyx_t_6 = ((struct __pyx_vtabstruct_9lightning_6random_11random_fast_RandomState *)__pyx_v_rs->__pyx_vtab)->randint(__pyx_v_rs, (__pyx_v_max_size - 1), 0);
+    __pyx_t_6 = ((struct __pyx_vtabstruct_5lasvm_6random_11random_fast_RandomState *)__pyx_v_rs->__pyx_vtab)->randint(__pyx_v_rs, (__pyx_v_max_size - 1), 0);
     __pyx_v_s = (*__Pyx_BufPtrCContig1d(int *, __pyx_pybuffernd_A.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_A.diminfo[0].strides));
 
-    /* "lightning/select_fast.pyx":58
+    /* "lasvm/select_fast.pyx":58
  *         s = A[rs.randint(max_size - 1)]
  * 
  *         if check_duplicates and support_vectors[s] >= 0:             # <<<<<<<<<<<<<<
@@ -2258,7 +2258,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_7) {
 
-      /* "lightning/select_fast.pyx":59
+      /* "lasvm/select_fast.pyx":59
  * 
  *         if check_duplicates and support_vectors[s] >= 0:
  *             continue             # <<<<<<<<<<<<<<
@@ -2267,7 +2267,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
       goto __pyx_L3_continue;
 
-      /* "lightning/select_fast.pyx":58
+      /* "lasvm/select_fast.pyx":58
  *         s = A[rs.randint(max_size - 1)]
  * 
  *         if check_duplicates and support_vectors[s] >= 0:             # <<<<<<<<<<<<<<
@@ -2276,7 +2276,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
     }
 
-    /* "lightning/select_fast.pyx":61
+    /* "lasvm/select_fast.pyx":61
  *             continue
  * 
  *         score = 0             # <<<<<<<<<<<<<<
@@ -2285,7 +2285,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
     __pyx_v_score = 0.0;
 
-    /* "lightning/select_fast.pyx":64
+    /* "lasvm/select_fast.pyx":64
  * 
  *         # Compute prediction.
  *         it = support_set.begin()             # <<<<<<<<<<<<<<
@@ -2294,16 +2294,16 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
     __pyx_v_it = __pyx_v_support_set->begin();
 
-    /* "lightning/select_fast.pyx":65
+    /* "lasvm/select_fast.pyx":65
  *         # Compute prediction.
  *         it = support_set.begin()
  *         col = kds.get_column_sv_ptr(s)             # <<<<<<<<<<<<<<
  *         while it != support_set.end():
  *             j = deref(it)
  */
-    __pyx_v_col = ((struct __pyx_vtabstruct_9lightning_12dataset_fast_KernelDataset *)__pyx_v_kds->__pyx_base.__pyx_vtab)->get_column_sv_ptr(__pyx_v_kds, __pyx_v_s);
+    __pyx_v_col = ((struct __pyx_vtabstruct_5lasvm_12dataset_fast_KernelDataset *)__pyx_v_kds->__pyx_base.__pyx_vtab)->get_column_sv_ptr(__pyx_v_kds, __pyx_v_s);
 
-    /* "lightning/select_fast.pyx":66
+    /* "lasvm/select_fast.pyx":66
  *         it = support_set.begin()
  *         col = kds.get_column_sv_ptr(s)
  *         while it != support_set.end():             # <<<<<<<<<<<<<<
@@ -2314,7 +2314,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
       __pyx_t_7 = ((__pyx_v_it != __pyx_v_support_set->end()) != 0);
       if (!__pyx_t_7) break;
 
-      /* "lightning/select_fast.pyx":67
+      /* "lasvm/select_fast.pyx":67
  *         col = kds.get_column_sv_ptr(s)
  *         while it != support_set.end():
  *             j = deref(it)             # <<<<<<<<<<<<<<
@@ -2323,7 +2323,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
       __pyx_v_j = (*__pyx_v_it);
 
-      /* "lightning/select_fast.pyx":68
+      /* "lasvm/select_fast.pyx":68
  *         while it != support_set.end():
  *             j = deref(it)
  *             score += alpha[j] * col[j]             # <<<<<<<<<<<<<<
@@ -2333,7 +2333,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
       __pyx_t_6 = __pyx_v_j;
       __pyx_v_score = (__pyx_v_score + ((*__Pyx_BufPtrCContig1d(double *, __pyx_pybuffernd_alpha.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_alpha.diminfo[0].strides)) * (__pyx_v_col[__pyx_v_j])));
 
-      /* "lightning/select_fast.pyx":69
+      /* "lasvm/select_fast.pyx":69
  *             j = deref(it)
  *             score += alpha[j] * col[j]
  *             inc(it)             # <<<<<<<<<<<<<<
@@ -2343,7 +2343,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
       (void)((++__pyx_v_it));
     }
 
-    /* "lightning/select_fast.pyx":71
+    /* "lasvm/select_fast.pyx":71
  *             inc(it)
  * 
  *         score += b             # <<<<<<<<<<<<<<
@@ -2352,7 +2352,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
     __pyx_v_score = (__pyx_v_score + __pyx_v_b);
 
-    /* "lightning/select_fast.pyx":73
+    /* "lasvm/select_fast.pyx":73
  *         score += b
  * 
  *         if select_method == 2: # active             # <<<<<<<<<<<<<<
@@ -2362,7 +2362,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
     switch (__pyx_v_select_method) {
       case 2:
 
-      /* "lightning/select_fast.pyx":74
+      /* "lasvm/select_fast.pyx":74
  * 
  *         if select_method == 2: # active
  *             score = fabs(score)             # <<<<<<<<<<<<<<
@@ -2371,7 +2371,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
       __pyx_v_score = fabs(__pyx_v_score);
 
-      /* "lightning/select_fast.pyx":73
+      /* "lasvm/select_fast.pyx":73
  *         score += b
  * 
  *         if select_method == 2: # active             # <<<<<<<<<<<<<<
@@ -2381,7 +2381,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
       break;
       case 3:
 
-      /* "lightning/select_fast.pyx":76
+      /* "lasvm/select_fast.pyx":76
  *             score = fabs(score)
  *         elif select_method == 3: # loss
  *             score *= y[s]             # <<<<<<<<<<<<<<
@@ -2391,7 +2391,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
       __pyx_t_6 = __pyx_v_s;
       __pyx_v_score = (__pyx_v_score * (*__Pyx_BufPtrStrided1d(double *, __pyx_pybuffernd_y.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_y.diminfo[0].strides)));
 
-      /* "lightning/select_fast.pyx":75
+      /* "lasvm/select_fast.pyx":75
  *         if select_method == 2: # active
  *             score = fabs(score)
  *         elif select_method == 3: # loss             # <<<<<<<<<<<<<<
@@ -2402,7 +2402,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
       default: break;
     }
 
-    /* "lightning/select_fast.pyx":78
+    /* "lasvm/select_fast.pyx":78
  *             score *= y[s]
  * 
  *         if score < min_score:             # <<<<<<<<<<<<<<
@@ -2412,7 +2412,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
     __pyx_t_7 = ((__pyx_v_score < __pyx_v_min_score) != 0);
     if (__pyx_t_7) {
 
-      /* "lightning/select_fast.pyx":79
+      /* "lasvm/select_fast.pyx":79
  * 
  *         if score < min_score:
  *             min_score = score             # <<<<<<<<<<<<<<
@@ -2421,7 +2421,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
       __pyx_v_min_score = __pyx_v_score;
 
-      /* "lightning/select_fast.pyx":80
+      /* "lasvm/select_fast.pyx":80
  *         if score < min_score:
  *             min_score = score
  *             selected = s             # <<<<<<<<<<<<<<
@@ -2430,7 +2430,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  */
       __pyx_v_selected = __pyx_v_s;
 
-      /* "lightning/select_fast.pyx":78
+      /* "lasvm/select_fast.pyx":78
  *             score *= y[s]
  * 
  *         if score < min_score:             # <<<<<<<<<<<<<<
@@ -2441,7 +2441,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
     __pyx_L3_continue:;
   }
 
-  /* "lightning/select_fast.pyx":82
+  /* "lasvm/select_fast.pyx":82
  *             selected = s
  * 
  *     return selected             # <<<<<<<<<<<<<<
@@ -2451,7 +2451,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
   __pyx_r = __pyx_v_selected;
   goto __pyx_L0;
 
-  /* "lightning/select_fast.pyx":34
+  /* "lasvm/select_fast.pyx":34
  * 
  * 
  * cdef int select_sv(np.ndarray[int, ndim=1, mode='c'] A,             # <<<<<<<<<<<<<<
@@ -2469,7 +2469,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_alpha.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_y.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_WriteUnraisable("lightning.select_fast.select_sv", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("lasvm.select_fast.select_sv", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -2481,7 +2481,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
   return __pyx_r;
 }
 
-/* "lightning/select_fast.pyx":85
+/* "lasvm/select_fast.pyx":85
  * 
  * 
  * cdef int select_sv_precomputed(int* A,             # <<<<<<<<<<<<<<
@@ -2489,7 +2489,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv(PyArrayObject *__pyx_v_A, 
  *                               int max_size,
  */
 
-static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A, int __pyx_v_search_size, int __pyx_v_max_size, int __pyx_v_select_method, double *__pyx_v_errors, struct __pyx_obj_9lightning_6random_11random_fast_RandomState *__pyx_v_rs) {
+static int __pyx_f_5lasvm_11select_fast_select_sv_precomputed(int *__pyx_v_A, int __pyx_v_search_size, int __pyx_v_max_size, int __pyx_v_select_method, double *__pyx_v_errors, struct __pyx_obj_5lasvm_6random_11random_fast_RandomState *__pyx_v_rs) {
   int __pyx_v_s;
   double __pyx_v_score;
   double __pyx_v_min_score;
@@ -2503,7 +2503,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
   int __pyx_t_4;
   __Pyx_RefNannySetupContext("select_sv_precomputed", 0);
 
-  /* "lightning/select_fast.pyx":94
+  /* "lasvm/select_fast.pyx":94
  *     cdef int s
  *     cdef double score
  *     cdef double min_score = DBL_MAX             # <<<<<<<<<<<<<<
@@ -2512,7 +2512,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
  */
   __pyx_v_min_score = DBL_MAX;
 
-  /* "lightning/select_fast.pyx":95
+  /* "lasvm/select_fast.pyx":95
  *     cdef double score
  *     cdef double min_score = DBL_MAX
  *     cdef int selected = 0             # <<<<<<<<<<<<<<
@@ -2521,7 +2521,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
  */
   __pyx_v_selected = 0;
 
-  /* "lightning/select_fast.pyx":97
+  /* "lasvm/select_fast.pyx":97
  *     cdef int selected = 0
  * 
  *     for i in range(search_size):             # <<<<<<<<<<<<<<
@@ -2533,16 +2533,16 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "lightning/select_fast.pyx":98
+    /* "lasvm/select_fast.pyx":98
  * 
  *     for i in range(search_size):
  *         s = A[rs.randint(max_size - 1)]             # <<<<<<<<<<<<<<
  * 
  *         if select_method == 2: # active
  */
-    __pyx_v_s = (__pyx_v_A[((struct __pyx_vtabstruct_9lightning_6random_11random_fast_RandomState *)__pyx_v_rs->__pyx_vtab)->randint(__pyx_v_rs, (__pyx_v_max_size - 1), 0)]);
+    __pyx_v_s = (__pyx_v_A[((struct __pyx_vtabstruct_5lasvm_6random_11random_fast_RandomState *)__pyx_v_rs->__pyx_vtab)->randint(__pyx_v_rs, (__pyx_v_max_size - 1), 0)]);
 
-    /* "lightning/select_fast.pyx":100
+    /* "lasvm/select_fast.pyx":100
  *         s = A[rs.randint(max_size - 1)]
  * 
  *         if select_method == 2: # active             # <<<<<<<<<<<<<<
@@ -2552,7 +2552,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
     switch (__pyx_v_select_method) {
       case 2:
 
-      /* "lightning/select_fast.pyx":101
+      /* "lasvm/select_fast.pyx":101
  * 
  *         if select_method == 2: # active
  *             score = fabs(errors[s] - 1)             # <<<<<<<<<<<<<<
@@ -2561,7 +2561,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
  */
       __pyx_v_score = fabs(((__pyx_v_errors[__pyx_v_s]) - 1.0));
 
-      /* "lightning/select_fast.pyx":100
+      /* "lasvm/select_fast.pyx":100
  *         s = A[rs.randint(max_size - 1)]
  * 
  *         if select_method == 2: # active             # <<<<<<<<<<<<<<
@@ -2571,7 +2571,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
       break;
       case 3:
 
-      /* "lightning/select_fast.pyx":103
+      /* "lasvm/select_fast.pyx":103
  *             score = fabs(errors[s] - 1)
  *         elif select_method == 3: # loss
  *             score = -errors[s]             # <<<<<<<<<<<<<<
@@ -2580,7 +2580,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
  */
       __pyx_v_score = (-(__pyx_v_errors[__pyx_v_s]));
 
-      /* "lightning/select_fast.pyx":102
+      /* "lasvm/select_fast.pyx":102
  *         if select_method == 2: # active
  *             score = fabs(errors[s] - 1)
  *         elif select_method == 3: # loss             # <<<<<<<<<<<<<<
@@ -2591,7 +2591,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
       default: break;
     }
 
-    /* "lightning/select_fast.pyx":105
+    /* "lasvm/select_fast.pyx":105
  *             score = -errors[s]
  * 
  *         if score < min_score:             # <<<<<<<<<<<<<<
@@ -2601,7 +2601,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
     __pyx_t_4 = ((__pyx_v_score < __pyx_v_min_score) != 0);
     if (__pyx_t_4) {
 
-      /* "lightning/select_fast.pyx":106
+      /* "lasvm/select_fast.pyx":106
  * 
  *         if score < min_score:
  *             min_score = score             # <<<<<<<<<<<<<<
@@ -2610,7 +2610,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
  */
       __pyx_v_min_score = __pyx_v_score;
 
-      /* "lightning/select_fast.pyx":107
+      /* "lasvm/select_fast.pyx":107
  *         if score < min_score:
  *             min_score = score
  *             selected = s             # <<<<<<<<<<<<<<
@@ -2619,7 +2619,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
  */
       __pyx_v_selected = __pyx_v_s;
 
-      /* "lightning/select_fast.pyx":105
+      /* "lasvm/select_fast.pyx":105
  *             score = -errors[s]
  * 
  *         if score < min_score:             # <<<<<<<<<<<<<<
@@ -2629,7 +2629,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
     }
   }
 
-  /* "lightning/select_fast.pyx":109
+  /* "lasvm/select_fast.pyx":109
  *             selected = s
  * 
  *     return selected             # <<<<<<<<<<<<<<
@@ -2637,7 +2637,7 @@ static int __pyx_f_9lightning_11select_fast_select_sv_precomputed(int *__pyx_v_A
   __pyx_r = __pyx_v_selected;
   goto __pyx_L0;
 
-  /* "lightning/select_fast.pyx":85
+  /* "lasvm/select_fast.pyx":85
  * 
  * 
  * cdef int select_sv_precomputed(int* A,             # <<<<<<<<<<<<<<
@@ -3744,7 +3744,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "lightning/select_fast.pyx":31
+  /* "lasvm/select_fast.pyx":31
  *         return 3
  *     else:
  *         raise ValueError("Wrong selection method.")             # <<<<<<<<<<<<<<
@@ -3821,9 +3821,9 @@ static int __Pyx_modinit_function_export_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_function_export_code", 0);
   /*--- Function export code ---*/
-  if (__Pyx_ExportFunction("get_select_method", (void (*)(void))__pyx_f_9lightning_11select_fast_get_select_method, "int (PyObject *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("select_sv", (void (*)(void))__pyx_f_9lightning_11select_fast_select_sv, "int (PyArrayObject *, int, int, int, PyArrayObject *, double, struct __pyx_obj_9lightning_12dataset_fast_KernelDataset *, PyArrayObject *, int, struct __pyx_obj_9lightning_6random_11random_fast_RandomState *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("select_sv_precomputed", (void (*)(void))__pyx_f_9lightning_11select_fast_select_sv_precomputed, "int (int *, int, int, int, double *, struct __pyx_obj_9lightning_6random_11random_fast_RandomState *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("get_select_method", (void (*)(void))__pyx_f_5lasvm_11select_fast_get_select_method, "int (PyObject *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("select_sv", (void (*)(void))__pyx_f_5lasvm_11select_fast_select_sv, "int (PyArrayObject *, int, int, int, PyArrayObject *, double, struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset *, PyArrayObject *, int, struct __pyx_obj_5lasvm_6random_11random_fast_RandomState *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("select_sv_precomputed", (void (*)(void))__pyx_f_5lasvm_11select_fast_select_sv_precomputed, "int (int *, int, int, int, double *, struct __pyx_obj_5lasvm_6random_11random_fast_RandomState *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3891,32 +3891,32 @@ static int __Pyx_modinit_type_import_code(void) {
   __pyx_ptype_5numpy_ufunc = __Pyx_ImportType(__pyx_t_1, "numpy", "ufunc", sizeof(PyUFuncObject), __Pyx_ImportType_CheckSize_Ignore);
    if (!__pyx_ptype_5numpy_ufunc) __PYX_ERR(1, 827, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyImport_ImportModule("lightning.random.random_fast"); if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 10, __pyx_L1_error)
+  __pyx_t_1 = PyImport_ImportModule("lasvm.random.random_fast"); if (unlikely(!__pyx_t_1)) __PYX_ERR(3, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_ptype_9lightning_6random_11random_fast_RandomState = __Pyx_ImportType(__pyx_t_1, "lightning.random.random_fast", "RandomState", sizeof(struct __pyx_obj_9lightning_6random_11random_fast_RandomState), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9lightning_6random_11random_fast_RandomState) __PYX_ERR(3, 10, __pyx_L1_error)
-  __pyx_vtabptr_9lightning_6random_11random_fast_RandomState = (struct __pyx_vtabstruct_9lightning_6random_11random_fast_RandomState*)__Pyx_GetVtable(__pyx_ptype_9lightning_6random_11random_fast_RandomState->tp_dict); if (unlikely(!__pyx_vtabptr_9lightning_6random_11random_fast_RandomState)) __PYX_ERR(3, 10, __pyx_L1_error)
+  __pyx_ptype_5lasvm_6random_11random_fast_RandomState = __Pyx_ImportType(__pyx_t_1, "lasvm.random.random_fast", "RandomState", sizeof(struct __pyx_obj_5lasvm_6random_11random_fast_RandomState), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_5lasvm_6random_11random_fast_RandomState) __PYX_ERR(3, 10, __pyx_L1_error)
+  __pyx_vtabptr_5lasvm_6random_11random_fast_RandomState = (struct __pyx_vtabstruct_5lasvm_6random_11random_fast_RandomState*)__Pyx_GetVtable(__pyx_ptype_5lasvm_6random_11random_fast_RandomState->tp_dict); if (unlikely(!__pyx_vtabptr_5lasvm_6random_11random_fast_RandomState)) __PYX_ERR(3, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyImport_ImportModule("lightning.dataset_fast"); if (unlikely(!__pyx_t_1)) __PYX_ERR(4, 7, __pyx_L1_error)
+  __pyx_t_1 = PyImport_ImportModule("lasvm.dataset_fast"); if (unlikely(!__pyx_t_1)) __PYX_ERR(4, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_ptype_9lightning_12dataset_fast_Dataset = __Pyx_ImportType(__pyx_t_1, "lightning.dataset_fast", "Dataset", sizeof(struct __pyx_obj_9lightning_12dataset_fast_Dataset), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9lightning_12dataset_fast_Dataset) __PYX_ERR(4, 7, __pyx_L1_error)
-  __pyx_vtabptr_9lightning_12dataset_fast_Dataset = (struct __pyx_vtabstruct_9lightning_12dataset_fast_Dataset*)__Pyx_GetVtable(__pyx_ptype_9lightning_12dataset_fast_Dataset->tp_dict); if (unlikely(!__pyx_vtabptr_9lightning_12dataset_fast_Dataset)) __PYX_ERR(4, 7, __pyx_L1_error)
-  __pyx_ptype_9lightning_12dataset_fast_ContiguousDataset = __Pyx_ImportType(__pyx_t_1, "lightning.dataset_fast", "ContiguousDataset", sizeof(struct __pyx_obj_9lightning_12dataset_fast_ContiguousDataset), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9lightning_12dataset_fast_ContiguousDataset) __PYX_ERR(4, 32, __pyx_L1_error)
-  __pyx_vtabptr_9lightning_12dataset_fast_ContiguousDataset = (struct __pyx_vtabstruct_9lightning_12dataset_fast_ContiguousDataset*)__Pyx_GetVtable(__pyx_ptype_9lightning_12dataset_fast_ContiguousDataset->tp_dict); if (unlikely(!__pyx_vtabptr_9lightning_12dataset_fast_ContiguousDataset)) __PYX_ERR(4, 32, __pyx_L1_error)
-  __pyx_ptype_9lightning_12dataset_fast_FortranDataset = __Pyx_ImportType(__pyx_t_1, "lightning.dataset_fast", "FortranDataset", sizeof(struct __pyx_obj_9lightning_12dataset_fast_FortranDataset), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9lightning_12dataset_fast_FortranDataset) __PYX_ERR(4, 45, __pyx_L1_error)
-  __pyx_vtabptr_9lightning_12dataset_fast_FortranDataset = (struct __pyx_vtabstruct_9lightning_12dataset_fast_FortranDataset*)__Pyx_GetVtable(__pyx_ptype_9lightning_12dataset_fast_FortranDataset->tp_dict); if (unlikely(!__pyx_vtabptr_9lightning_12dataset_fast_FortranDataset)) __PYX_ERR(4, 45, __pyx_L1_error)
-  __pyx_ptype_9lightning_12dataset_fast_CSRDataset = __Pyx_ImportType(__pyx_t_1, "lightning.dataset_fast", "CSRDataset", sizeof(struct __pyx_obj_9lightning_12dataset_fast_CSRDataset), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9lightning_12dataset_fast_CSRDataset) __PYX_ERR(4, 58, __pyx_L1_error)
-  __pyx_vtabptr_9lightning_12dataset_fast_CSRDataset = (struct __pyx_vtabstruct_9lightning_12dataset_fast_CSRDataset*)__Pyx_GetVtable(__pyx_ptype_9lightning_12dataset_fast_CSRDataset->tp_dict); if (unlikely(!__pyx_vtabptr_9lightning_12dataset_fast_CSRDataset)) __PYX_ERR(4, 58, __pyx_L1_error)
-  __pyx_ptype_9lightning_12dataset_fast_CSCDataset = __Pyx_ImportType(__pyx_t_1, "lightning.dataset_fast", "CSCDataset", sizeof(struct __pyx_obj_9lightning_12dataset_fast_CSCDataset), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9lightning_12dataset_fast_CSCDataset) __PYX_ERR(4, 72, __pyx_L1_error)
-  __pyx_vtabptr_9lightning_12dataset_fast_CSCDataset = (struct __pyx_vtabstruct_9lightning_12dataset_fast_CSCDataset*)__Pyx_GetVtable(__pyx_ptype_9lightning_12dataset_fast_CSCDataset->tp_dict); if (unlikely(!__pyx_vtabptr_9lightning_12dataset_fast_CSCDataset)) __PYX_ERR(4, 72, __pyx_L1_error)
-  __pyx_ptype_9lightning_12dataset_fast_KernelDataset = __Pyx_ImportType(__pyx_t_1, "lightning.dataset_fast", "KernelDataset", sizeof(struct __pyx_obj_9lightning_12dataset_fast_KernelDataset), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9lightning_12dataset_fast_KernelDataset) __PYX_ERR(4, 86, __pyx_L1_error)
-  __pyx_vtabptr_9lightning_12dataset_fast_KernelDataset = (struct __pyx_vtabstruct_9lightning_12dataset_fast_KernelDataset*)__Pyx_GetVtable(__pyx_ptype_9lightning_12dataset_fast_KernelDataset->tp_dict); if (unlikely(!__pyx_vtabptr_9lightning_12dataset_fast_KernelDataset)) __PYX_ERR(4, 86, __pyx_L1_error)
+  __pyx_ptype_5lasvm_12dataset_fast_Dataset = __Pyx_ImportType(__pyx_t_1, "lasvm.dataset_fast", "Dataset", sizeof(struct __pyx_obj_5lasvm_12dataset_fast_Dataset), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_5lasvm_12dataset_fast_Dataset) __PYX_ERR(4, 7, __pyx_L1_error)
+  __pyx_vtabptr_5lasvm_12dataset_fast_Dataset = (struct __pyx_vtabstruct_5lasvm_12dataset_fast_Dataset*)__Pyx_GetVtable(__pyx_ptype_5lasvm_12dataset_fast_Dataset->tp_dict); if (unlikely(!__pyx_vtabptr_5lasvm_12dataset_fast_Dataset)) __PYX_ERR(4, 7, __pyx_L1_error)
+  __pyx_ptype_5lasvm_12dataset_fast_ContiguousDataset = __Pyx_ImportType(__pyx_t_1, "lasvm.dataset_fast", "ContiguousDataset", sizeof(struct __pyx_obj_5lasvm_12dataset_fast_ContiguousDataset), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_5lasvm_12dataset_fast_ContiguousDataset) __PYX_ERR(4, 32, __pyx_L1_error)
+  __pyx_vtabptr_5lasvm_12dataset_fast_ContiguousDataset = (struct __pyx_vtabstruct_5lasvm_12dataset_fast_ContiguousDataset*)__Pyx_GetVtable(__pyx_ptype_5lasvm_12dataset_fast_ContiguousDataset->tp_dict); if (unlikely(!__pyx_vtabptr_5lasvm_12dataset_fast_ContiguousDataset)) __PYX_ERR(4, 32, __pyx_L1_error)
+  __pyx_ptype_5lasvm_12dataset_fast_FortranDataset = __Pyx_ImportType(__pyx_t_1, "lasvm.dataset_fast", "FortranDataset", sizeof(struct __pyx_obj_5lasvm_12dataset_fast_FortranDataset), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_5lasvm_12dataset_fast_FortranDataset) __PYX_ERR(4, 45, __pyx_L1_error)
+  __pyx_vtabptr_5lasvm_12dataset_fast_FortranDataset = (struct __pyx_vtabstruct_5lasvm_12dataset_fast_FortranDataset*)__Pyx_GetVtable(__pyx_ptype_5lasvm_12dataset_fast_FortranDataset->tp_dict); if (unlikely(!__pyx_vtabptr_5lasvm_12dataset_fast_FortranDataset)) __PYX_ERR(4, 45, __pyx_L1_error)
+  __pyx_ptype_5lasvm_12dataset_fast_CSRDataset = __Pyx_ImportType(__pyx_t_1, "lasvm.dataset_fast", "CSRDataset", sizeof(struct __pyx_obj_5lasvm_12dataset_fast_CSRDataset), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_5lasvm_12dataset_fast_CSRDataset) __PYX_ERR(4, 58, __pyx_L1_error)
+  __pyx_vtabptr_5lasvm_12dataset_fast_CSRDataset = (struct __pyx_vtabstruct_5lasvm_12dataset_fast_CSRDataset*)__Pyx_GetVtable(__pyx_ptype_5lasvm_12dataset_fast_CSRDataset->tp_dict); if (unlikely(!__pyx_vtabptr_5lasvm_12dataset_fast_CSRDataset)) __PYX_ERR(4, 58, __pyx_L1_error)
+  __pyx_ptype_5lasvm_12dataset_fast_CSCDataset = __Pyx_ImportType(__pyx_t_1, "lasvm.dataset_fast", "CSCDataset", sizeof(struct __pyx_obj_5lasvm_12dataset_fast_CSCDataset), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_5lasvm_12dataset_fast_CSCDataset) __PYX_ERR(4, 72, __pyx_L1_error)
+  __pyx_vtabptr_5lasvm_12dataset_fast_CSCDataset = (struct __pyx_vtabstruct_5lasvm_12dataset_fast_CSCDataset*)__Pyx_GetVtable(__pyx_ptype_5lasvm_12dataset_fast_CSCDataset->tp_dict); if (unlikely(!__pyx_vtabptr_5lasvm_12dataset_fast_CSCDataset)) __PYX_ERR(4, 72, __pyx_L1_error)
+  __pyx_ptype_5lasvm_12dataset_fast_KernelDataset = __Pyx_ImportType(__pyx_t_1, "lasvm.dataset_fast", "KernelDataset", sizeof(struct __pyx_obj_5lasvm_12dataset_fast_KernelDataset), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_5lasvm_12dataset_fast_KernelDataset) __PYX_ERR(4, 86, __pyx_L1_error)
+  __pyx_vtabptr_5lasvm_12dataset_fast_KernelDataset = (struct __pyx_vtabstruct_5lasvm_12dataset_fast_KernelDataset*)__Pyx_GetVtable(__pyx_ptype_5lasvm_12dataset_fast_KernelDataset->tp_dict); if (unlikely(!__pyx_vtabptr_5lasvm_12dataset_fast_KernelDataset)) __PYX_ERR(4, 86, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -4116,14 +4116,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_lightning__select_fast) {
+  if (__pyx_module_is_main_lasvm__select_fast) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "lightning.select_fast")) {
-      if (unlikely(PyDict_SetItemString(modules, "lightning.select_fast", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "lasvm.select_fast")) {
+      if (unlikely(PyDict_SetItemString(modules, "lasvm.select_fast", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -4144,7 +4144,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "lightning/select_fast.pyx":1
+  /* "lasvm/select_fast.pyx":1
  * # encoding: utf-8             # <<<<<<<<<<<<<<
  * # cython: cdivision=True
  * # cython: boundscheck=False
@@ -4169,11 +4169,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init lightning.select_fast", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init lasvm.select_fast", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init lightning.select_fast");
+    PyErr_SetString(PyExc_ImportError, "init lasvm.select_fast");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

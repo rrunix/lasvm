@@ -7,7 +7,7 @@ from nose.tools import assert_raises, assert_true, assert_equal
 
 from sklearn.datasets import make_classification
 import unittest
-from lightning.lasvm import LaSVM
+from lasvm.lasvm import LaSVM
 
 bin_dense, bin_target = make_classification(n_samples=200, n_features=100,
                                             n_informative=5,

@@ -5,9 +5,9 @@ import numpy
 def configuration(parent_package='', top_path=None):
     from numpy.distutils.misc_util import Configuration
 
-    config = Configuration('lightning', parent_package, top_path)
+    config = Configuration('lasvm', parent_package, top_path)
 
-    randomdir = os.path.join(top_path, "lightning", "random")
+    randomdir = os.path.join(top_path, "lasvm", "random")
 
     config.add_extension('dataset_fast',
          sources=['dataset_fast.cpp'],
@@ -46,7 +46,7 @@ def configuration(parent_package='', top_path=None):
 
     config.add_subpackage('random')
 #     config.add_subpackage('tests')
-    config.add_subpackage('datasets')
+    #config.add_subpackage('datasets')
 
     return config
 

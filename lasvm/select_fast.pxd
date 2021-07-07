@@ -2,8 +2,8 @@ from libcpp.list cimport list
 
 cimport numpy as np
 
-from lightning.random.random_fast cimport RandomState
-from lightning.dataset_fast cimport KernelDataset
+from lasvm.random.random_fast cimport RandomState
+from lasvm.dataset_fast cimport KernelDataset
 
 cdef int get_select_method(selection)
 

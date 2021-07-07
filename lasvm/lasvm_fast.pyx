@@ -14,9 +14,9 @@ from libcpp.list cimport list
 import numpy as np
 cimport numpy as np
 
-from lightning.dataset_fast cimport KernelDataset
-from lightning.select_fast cimport get_select_method, select_sv
-from lightning.random.random_fast cimport RandomState
+from lasvm.dataset_fast cimport KernelDataset
+from lasvm.select_fast cimport get_select_method, select_sv
+from lasvm.random.random_fast cimport RandomState
 
 
 cdef extern from "float.h":
