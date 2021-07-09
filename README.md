@@ -4,7 +4,7 @@ LaSVM Implementation
 LaSVM implementation written in Python/Cython following sklearn classifier API.
 
 
-The code was extracted and adapted from py2 to py3 from https://github.com/scikit-learn-contrib/lightning (checkpoint 6594fd8bdfba3cc808b3852cf380125e7e9df03e).
+The code was extracted and adapted from py2 to py3 from https://github.com/scikit-learn-contrib/lightning (checkpoint 6594fd8).
 
 
 Code example:
