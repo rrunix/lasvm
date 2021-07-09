@@ -5,8 +5,8 @@
 *.swp
 .DS_Store
 build
-lightning/**/*.html
-lightning/*.c
+lasvm/**/*.html
+lasvm/*.c
 *.cpp
 
 dist/
@@ -15,7 +15,7 @@ doc/auto_examples/
 doc/modules/generated/
 doc/datasets/generated/
 pip-log.txt
-lightning.egg-info/
+lasvm.egg-info/
 .coverage
 coverage
 tags
@@ -33,3 +33,4 @@ doc/samples
 *.tar.gz
 *.tgz
 joblib
+lasvm.egg-info/*
