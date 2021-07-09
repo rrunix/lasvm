@@ -14,7 +14,7 @@ MAINTAINER_EMAIL = 'ruben.rrf93@gmail.com'
 URL = 'https://github.com/rrunix/lasvm'
 LICENSE = 'new BSD'
 DOWNLOAD_URL = 'https://github.com/rrunix/lasvm'
-VERSION = '0.1-git'
+VERSION = '0.1'
 
 INSTALL_REQUIRES = ['scikit-learn>=0.21.0', 'cython>=0.29', 'numpy>=1.17.0']
 
