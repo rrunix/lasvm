@@ -13,7 +13,7 @@ Code example:
 import random
 
 import numpy as np
-from lasvm.lasvm import LaSVM
+from lasvm import LaSVM
 from sklearn.datasets import load_breast_cancer
 from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
