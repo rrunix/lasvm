@@ -2,6 +2,8 @@
 # cython: cdivision=True
 # cython: boundscheck=False
 # cython: wraparound=False
+# cython: language_level=3
+# distutils: language=c++
 #
 # Author: Mathieu Blondel
 # License: BSD
@@ -339,7 +341,7 @@ def _lasvm(self,
     for it in range(max_iter):
 
         if verbose >= 1:
-            print ("\nIteration", it)
+            print("\nIteration", it)
 
         if permute:
             rs.shuffle(A)

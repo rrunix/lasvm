@@ -1,3 +1,6 @@
+# cython: language_level=3
+# distutils: language=c++
+#
 # Copyright 2005 Robert Kern (robert.kern@gmail.com)
 
 from libc cimport stdlib
