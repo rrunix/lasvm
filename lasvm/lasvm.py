@@ -42,6 +42,10 @@ class LaSVM(BaseClassifier, ClassifierMixin):
         self.dual_coef_ = None
 
     def fit(self, X, y):
+        
+        X = np.ascontiguousarray(X, dtype=np.float64)
+        y = np.ascontiguousarray(y, dtype=np.float64)
+        
         n_samples = X.shape[0]
         rs = self._get_random_state()
 
