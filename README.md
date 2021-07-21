@@ -36,14 +36,20 @@ X_test_scaled = scaler.transform(X_test)
 
 svm = LaSVM(random_state=42, warm_start=True, verbose=False)
 
+previous_ids = []
+
 for i, increment_ids in enumerate(increment_groups):
-    X_increment = X_train[increment_ids]
-    y_increment = y_train[increment_ids]
+    increment_ids = list(np.ravel(increment_ids))
+    
+    X_increment = X_train[previous_ids + increment_ids]
+    y_increment = y_train[previous_ids + increment_ids]
+    
+    previous_ids.extend(increment_ids)
+    
     X_increment_scaled = scaler.transform(X_increment)
     svm.fit(X_increment_scaled, y_increment)
-
     score = f1_score(y_test, svm.predict(X_test_scaled))
-
+    
     print("Iteration {}: score {:.2f}, chunk size {}".format(i, score, len(X_increment)))
 
 ```
